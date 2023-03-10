@@ -1,0 +1,41 @@
+<!-- <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <h2>User</h2>
+      <div class="d-flex">
+        <button class="btn btn-success" >logout</button>
+      </div>
+    </div>
+  </nav> -->
+  <!-- <app-nav></app-nav> -->
+  
+  <div class="container">
+    <table class="table table-trapped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>blog</th>
+                <th>Edit</th>
+                <th>Add </th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+               <td>{{user.id}}</td>
+               <td>{{user.name}}</td>
+               <td>{{user.blog}}</td>
+               <td>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button><br/>
+               </td>
+              
+               <td>
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
+               </td>
+               <td>
+                <button class="btn btn-danger">Delete</button>
+               </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>

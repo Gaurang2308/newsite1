@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "parth",
+      "username": "Parth5021",
+      "password": "Parth@1008",
+      "status": "user",
+      "blog": {
+        "title": "I Asked Leading Covid Scientists — Off the Record — About the Virus’s Origins and the Lab Leak Theory",
+        "details": "According to a recent report from the Wall Street Journal, the U.S. Department of Energy has concluded, albeit with “low confidence,” that SARS-CoV-2 most likely arose from a lab incident. The FBI has come to a similar determination.",
+        "url": "https://medium.com/the-nuance/i-asked-leading-covid-scientists-off-the-record-about-the-viruss-origins-and-the-lab-leak-fecbec71ee61?source=home---------0------------------0----------"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Urvi",
+      "username": "Urvi2308",
+      "password": "Urvi@2308",
+      "status": "user"
+    },
+    {
+      "id": 4,
+      "name": "jay",
+      "username": "Jay2308",
+      "password": "Jay@2308",
+      "status": "user"
+    },
+    {
+      "id": 6,
+      "name": "Gaurang",
+      "username": "Gaurang2308",
+      "password": "Gaurang@2308",
+      "status": "admin"
+    },
+    {
+      "id": 7,
+      "name": "dev",
+      "username": "dev2308",
+      "password": "Dev@2308",
+      "status": "user"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

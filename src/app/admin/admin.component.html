@@ -1,0 +1,83 @@
+<!-- <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <h2>Admin</h2>
+      <div class="d-flex">
+        <button class="btn btn-success" (click)="logoutpage()">logout</button>
+      </div>
+    </div>
+  </nav> -->
+  <!-- <app-nav></app-nav> -->
+  <div class="container">
+    <table class="table table-trapped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>password</th>
+                <th>status</th>
+                
+                <th>Add </th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of allusersData">
+               <td>{{data.id}}</td>
+               <td>{{data.name}}</td>
+               <td>{{data.username}}</td>
+               <td>{{data.password}}</td>
+               <td>{{data.status}}</td>
+              
+               <td>
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
+               </td>
+               <td>
+                <button class="btn btn-danger"(click)="deleteuser(data)">Delete</button>
+               </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add user</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formvalue">
+                <div class="mb-3">
+                  <label for="exampleInputname1" class="form-label">Name</label>
+                  <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputname1" class="form-label">Username</label>
+                    <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">status</label>
+                    <input formControlName="status" type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                
+               
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addusers()" data-bs-dismiss="modal">Add Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
