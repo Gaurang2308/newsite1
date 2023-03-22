@@ -1,3 +1,4 @@
+import { usersData } from './../admin/admin.modal';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -21,15 +22,17 @@ export class LoginComponent implements OnInit {
   logIn() {
     this._http.get<any>("http://localhost:3000/users").subscribe(res=>{
        this.user= res.find((a:any)=>{
-        sessionStorage.setItem('userdata',JSON.stringify(this.user));
-        return a.username === this.loginform.value.username && a.password === this.loginform.value.password  
-      })
-      
-      if(this.user.status === "admin"){
+         return a.username === this.loginform.value.username && a.password === this.loginform.value.password  
+        })
+        
+        if(this.user.status === "admin"){
+       sessionStorage.setItem('username',JSON.stringify(this.user));
         alert("login successfully");
         this.loginform.reset();
         this.router.navigate(['admin'])
       }else if(this.user.status === "user"){
+        
+        sessionStorage.setItem('username',JSON.stringify(this.user));
         alert("login user successfully");
         this.loginform.reset();
         this.router.navigate(['user']);
