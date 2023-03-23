@@ -1,8 +1,9 @@
-import { usersData } from './../admin/admin.modal';
+
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { UsersDataService } from '../services/users-data.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +13,17 @@ export class LoginComponent implements OnInit {
   loginform!: FormGroup
   status:any
   user:any;
-  constructor(private formBuilder: FormBuilder, private _http: HttpClient, private router: Router) { }
+  showData:any;
+  constructor(private formBuilder: FormBuilder, private _http: HttpClient, private router: Router,private dis:UsersDataService ) {
+    this.GetDetails();
+   }
+   GetDetails() {
+    this.dis.users().subscribe((result) => {
+      this.showData = result;
+      console.log(this.showData);
+    }
+    )
+  }
   ngOnInit(): void {
     this.loginform = this.formBuilder.group({
       username: [''],

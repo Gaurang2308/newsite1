@@ -16,7 +16,9 @@ export class UserComponent implements OnInit {
  GetBlog:any;
  data:any;
  username:any;
- constructor(private dis:UsersDataService,private form:FormBuilder){
+ showData:any;
+ 
+ constructor(private dis:UsersDataService,private form:FormBuilder,){
 this.username = sessionStorage.getItem('username')
  }
  ngOnInit():void{
@@ -36,16 +38,16 @@ this.username = sessionStorage.getItem('username')
    }
 
 addblog(){
-  this.blogModelobj.username= this.username;
   this.blogModelobj.title = this.formvalue.value.title;
   this.blogModelobj.discription = this.formvalue.value.discription;
   this.blogModelobj.url = this.formvalue.value.url;
-  
+  console.log(this.formvalue.value)
   this.dis.postblogs(this.formvalue.value).subscribe(res=>{
     console.log(this.formvalue.value);
     this.data = res;
   })
 
 }
+
 
 }
