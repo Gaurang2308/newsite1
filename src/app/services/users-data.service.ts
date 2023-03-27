@@ -46,9 +46,14 @@ export class UsersDataService {
       return res;
     })) 
   }
+  editblogs(id:number){
+    return this.http.get<any>("http://localhost:3000/Blogs"+"/"+id).pipe(map((res:any)=>{
+      return res;
+    })) 
+  }
   GetblogById(code:any){
-    return this.http.get(this.blog+'/?Username='+`${code}`
-    );}
+    return this.http.get(this.blog+'/?Username='+`${code}`);
+  }
     Postblog(code:any){
       return this.http.post(this.blog,code
         ); }

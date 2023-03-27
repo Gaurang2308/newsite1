@@ -1,5 +1,5 @@
 export class blogData{
-username:string='';
+Username:string='';
 title:string='';
 discription:string='';
 url:any='';

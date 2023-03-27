@@ -1,7 +1,7 @@
 
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { UsersDataService } from '../services/users-data.service';
 @Component({
@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit {
     )
   }
   ngOnInit(): void {
-    this.loginform = this.formBuilder.group({
-      username: [''],
-      password: [''],
-    })
+    this.loginform = new FormGroup({
+      username: new FormControl(''),
+      password: new FormControl('')
+      })
   }
   logIn() {
     this._http.get<any>("http://localhost:3000/users").subscribe(res=>{
@@ -37,13 +37,14 @@ export class LoginComponent implements OnInit {
         })
         
         if(this.user.status === "admin"){
-       sessionStorage.setItem('username',JSON.stringify(this.user));
+       sessionStorage.setItem('user',JSON.stringify(this.user));
         alert("login successfully");
         this.loginform.reset();
         this.router.navigate(['admin'])
       }else if(this.user.status === "user"){
         
-        sessionStorage.setItem('username',JSON.stringify(this.user));
+        sessionStorage.setItem('user',JSON.stringify(this.user));
+        sessionStorage.setItem('username', JSON.stringify(this.user.username));
         alert("login user successfully");
         this.loginform.reset();
         this.router.navigate(['user']);
