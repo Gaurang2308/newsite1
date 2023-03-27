@@ -6,7 +6,6 @@ import {map} from 'rxjs/operators'
 })
 export class UsersDataService {
   user= "http://localhost:3000/users?status=user"
-  blog="http://localhost:3000/Blogs"
   constructor(private http:HttpClient) { }
   users()
   {
@@ -27,6 +26,7 @@ export class UsersDataService {
       return res;
     })) 
   }
+  blog="http://localhost:3000/Blogs"
   blogs()
   {
     return this.http.get(this.blog);
@@ -52,9 +52,12 @@ export class UsersDataService {
     })) 
   }
   GetblogById(code:any){
-    return this.http.get(this.blog+'/?Username='+`${code}`);
+    return this.http.get('http://localhost:3000/Blogs/?Username='+`${code}`);
   }
-    Postblog(code:any){
-      return this.http.post(this.blog,code
-        ); }
+  deleteBlgs(id:number){
+    return this.http.delete<any>("http://localhost:3000/Blogs/"+id).pipe(map((res:any)=>{
+      return res;
+    }))
+  }
+    
 }

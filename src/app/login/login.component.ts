@@ -43,8 +43,8 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['admin'])
       }else if(this.user.status === "user"){
         
+        sessionStorage.setItem('username',this.user.username);
         sessionStorage.setItem('user',JSON.stringify(this.user));
-        sessionStorage.setItem('username', JSON.stringify(this.user.username));
         alert("login user successfully");
         this.loginform.reset();
         this.router.navigate(['user']);

@@ -81,3 +81,37 @@
       </div>
     </div>
   </div>
+
+
+
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+    <th>username</th>
+    <th>title</th>
+    <th>discription</th>
+    <th>url</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let display of blogs">
+    <td>{{display.Username}}</td>
+    <td>{{display.title}}</td>
+    <td>{{display.discription}}</td>
+    <td>{{display.url}}</td>
+    <td>
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button><br/>
+     </td>
+    
+    
+     <td>
+      <button class="btn btn-danger">Delete</button>
+     </td>
+    </tr>
+  </tbody>
+</table>
+</div>

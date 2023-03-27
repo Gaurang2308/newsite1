@@ -15,8 +15,17 @@ export class AdminComponent implements OnInit{
   users:any
   
   usersModalObj : usersData = new usersData;
-  constructor(private userData:UsersDataService,private formbuilder:FormBuilder,private api:UsersDataService){
-    userData.users().subscribe((data)=>{
+  blogs: any;
+display: any;
+  constructor(private formbuilder:FormBuilder,private api:UsersDataService){
+    api.blogs().subscribe((display)=>
+    {
+      // console.warn("display",display)
+      console.log(display);
+      this.blogs=display;
+    }
+    );
+    api.users().subscribe((data)=>{
     console.warn("data",data);
     this.allusersData=data;
   });
