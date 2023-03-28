@@ -8,37 +8,38 @@
   </nav> -->
   <!-- <app-nav></app-nav> -->
   
-  <div class="container">
+
+    <button type="button" class="btn btn-info" style="float: right; margin-top: 50px; margin-right: 70px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
     <table class="table table-trapped">
         <thead>
+         
             <tr>
               <th scope="col">title</th>
               <th scope="col">description</th>
               <th scope="col">url</th>
               <th scope="col">Edit</th>
               <th scope="col">Delete</th>
-              <th>
-                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
-                 </th>
+              
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let display of blogs">
                <td>{{display.title}}</td>
                <td>{{display.discription}}</td>
-               <td>{{display.url}}</td>
+               <td><img src="{{display.url}}" style="height: 100px; width: 100px;"></td>
                <td>
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button><br/>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil"></i></button><br/>
                </td>
               
               
                <td>
-                <button class="btn btn-danger" (click)="delBlogs(display)">Delete</button>
+                <button class="btn btn-danger" (click)="delBlogs(display)"><i class="bi bi-trash"></i></button>
                </td>
+             
             </tr>
         </tbody>
     </table>
-  </div>
+
 
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

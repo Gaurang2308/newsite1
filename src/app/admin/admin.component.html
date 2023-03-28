@@ -1,14 +1,27 @@
-<!-- <nav class="navbar navbar-dark bg-primary">
-    <div class="container-fluid">
-      <h2>Admin</h2>
-      <div class="d-flex">
-        <button class="btn btn-success" (click)="logoutpage()">logout</button>
+<nav>
+  <ul>
+    <li>
+      <button (click)="showTable()" class="home-icon">
+        <div class="roof">
+          <div class="roof-edge"></div>
+        </div>
+        <div class="front"></div>
+      </button>
+    </li>
+   
+    <li>
+      <div class="about-icon" (click)="showTable1()">
+        <div class="head">
+          <div class="eyes"></div>
+          <div class="beard"></div>
+        </div>
       </div>
-    </div>
-  </nav> -->
-  <!-- <app-nav></app-nav> -->
+    </li>
+
+  </ul>
+</nav>
   <div class="container">
-    <table class="table table-trapped">
+    <table *ngIf="isTableVisible" class="table table-trapped">
         <thead>
             <tr>
                 <th>id</th>
@@ -16,9 +29,10 @@
                 <th>username</th>
                 <th>password</th>
                 <th>status</th>
-                
-                <th>Add </th>
-                <th>Delete</th>
+               
+                <th>
+                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 20px;">Add</button><br/>
+                 </th>
             </tr>
         </thead>
         <tbody>
@@ -30,10 +44,7 @@
                <td>{{data.status}}</td>
               
                <td>
-                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
-               </td>
-               <td>
-                <button class="btn btn-danger"(click)="deleteuser(data)">Delete</button>
+                <button class="btn btn-danger"(click)="deleteuser(data)"><i class="bi bi-trash"></i></button>
                </td>
             </tr>
         </tbody>
@@ -85,7 +96,7 @@
 
 
 <div class="container">
-<table class="table">
+<table *ngIf="isTable1Visible" class="table1">
   <thead>
     <tr>
     <th>username</th>
@@ -102,17 +113,17 @@
     <td>{{display.Username}}</td>
     <td>{{display.title}}</td>
     <td>{{display.discription}}</td>
-    <td>{{display.url}}</td>
+    <td><img src="{{display.url}}" style="height: 100px; width: 100px;"></td>
     <td>
-      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button><br/>
-     </td>
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil"></i></button><br/>
+    </td>
+    <td>
+  
     
-    
-     <td>
-      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
      </td>
     </tr>
   </tbody>
 </table>
-<h1>end</h1>
+
 </div>
