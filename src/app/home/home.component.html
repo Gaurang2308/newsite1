@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table1">
+      <thead>
+        <tr>
+        <th>username</th>
+        <th>title</th>
+        <th>discription</th>
+        <th>url</th>
+        
+        </tr>
+        
+      </thead>
+      <tbody>
+        <tr *ngFor="let display of blogs">
+        <td>{{display.Username}}</td>
+        <td>{{display.title}}</td>
+        <td>{{display.discription}}</td>
+        <td><img src="{{display.url}}" style="height: 100px; width: 100px;"></td>
+       
+        </tr>
+      </tbody>
+    </table>
+    
+    </div>

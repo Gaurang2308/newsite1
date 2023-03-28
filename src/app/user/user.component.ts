@@ -56,6 +56,7 @@ addblog(){
   this.dis.postblogs(this.formvalue.value).subscribe(res=>{
     console.log(this.formvalue.value);
     this.data = res;
+    this.reloadPage();
   })
 
 }

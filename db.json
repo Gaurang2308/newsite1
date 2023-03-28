@@ -39,52 +39,59 @@
   "Blogs": [
     {
       "Username": "Parth5021",
-      "title": "asd",
-      "discription": "asdas",
-      "url": "asd",
-      "id": 19
+      "title": "It’s Been 20 Years Since We Invaded Iraq. I Am Still in the Desert.",
+      "discription": "“I have gone to war and now I can issue my complaint. I can sit on my porch and complain all day. And you must listen. ",
+      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*cFK-YdT2Zna8ya5i4z3ThQ.jpeg",
+      "id": 29
     },
     {
       "Username": "Parth5021",
-      "title": "sdfsdf",
-      "discription": "sdfsdf",
-      "url": "sdfsfs",
-      "id": 20
-    },
-    {
-      "Username": "Parth5021",
-      "title": "aa",
-      "discription": "aa",
-      "url": "aa",
-      "id": 23
-    },
-    {
-      "Username": "Parth5021",
-      "title": "ss",
-      "discription": "ss",
-      "url": "ss",
-      "id": 24
-    },
-    {
-      "Username": "\"Parth5021\"",
-      "title": "gyjuyt",
-      "discription": "tyujytu",
-      "url": "tdyu",
-      "id": 26
-    },
-    {
-      "Username": "\"Parth5021\"",
-      "title": "aertg",
-      "discription": "wergta",
-      "url": "ewrgt",
-      "id": 27
+      "title": "Power Laws in Culture",
+      "discription": "Almost 20 years ago, Chris Anderson wrote The Long Tail, which accurately predicted that the Internet would fragment attention and consumption would shift into the “tail.”",
+      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*OShjeQUTuvh9i2Bulb47aQ.jpeg",
+      "id": 30
     },
     {
       "Username": "Jay2308",
-      "title": "ss",
-      "discription": "ss",
-      "url": "ss",
-      "id": 28
+      "title": "The Antidote to Envy",
+      "discription": "I recently came across a passage from Krishamurti’s Think On These Things that gave me pause. I rarely highlight entire paragraphs when I read, but this one was so poignant that I had to elevate it from the page and into my memory.",
+      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*mQDTptLP6ueG9nYAPphBqg.png",
+      "id": 31
+    },
+    {
+      "Username": "Jay2308",
+      "title": "Ode to Spring",
+      "discription": "Let me dream of mandolins, buds of spring that paint the rusted winter’s cage, with gentle air poking through sculpted clouds, farewell to quilted charcoal sky",
+      "url": "https://miro.medium.com/v2/resize:fit:720/0*FryeQzZeGG7cin7T",
+      "id": 32
+    },
+    {
+      "Username": "Urvi2308",
+      "title": "Five Steps For How I Build Brands",
+      "discription": "I will say this until undertakers shovel gravel and dirt over my face — data is directional, but definitive. Data is your tour guide, your backstage pass, and the operator’s manual you instantly bin when you unpack IKEA furniture or complex appliances. ",
+      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*z2pR84YgFsvVtezA8qpvQw.jpeg",
+      "id": 33
+    },
+    {
+      "Username": "Urvi2308",
+      "title": "The Curse of Perfect",
+      "discription": "My parents believed this so deeply that they left China with a one-way plane ticket and hundreds of dollars in folded bills, their mouths full of broken English.",
+      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*X2OrXOQxI2vET4ZaPIO4YQ.jpeg",
+      "id": 34
+    },
+    {
+      "Username": "dev2308",
+      "title": "What’s Going On? The Silicon Valley Bank Collapse vs. the 2008 Financial Crisis",
+      "discription": " Silicon Valley Bank, the financial industry, and how we move forward — When you’re driving, you have a reasonable assumption that other drivers will follow the rules.",
+      "url": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*RSIvKqwzu_NhP3j026snnA.png",
+      "id": 35
+    },
+    {
+      "Username": "dev2308",
+      "title": "Beginning Again At Fifty-Five",
+      "discription": " Trying to knock sense into the younger generation is not for the faint of heart — In one of my earlier pieces on writing, Singaporean author Alvin Ang asked me in the comment section",
+      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*F6ZwcDCqfcIakTpnEwuSmw.jpeg",
+      "id": 36
     }
   ],
   "posts": [

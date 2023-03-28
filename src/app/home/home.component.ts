@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { UsersDataService } from '../services/users-data.service';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class NavComponent {
+export class HomeComponent {
   display:any;
   blogs:any;
   allusersData: any;
-  constructor(private route:Router,private api:UsersDataService){
+  constructor(private api:UsersDataService){
     api.blogs().subscribe((display)=>
     {
       // console.warn("display",display)
@@ -24,8 +23,4 @@ export class NavComponent {
     this.allusersData=data;
   });
   }
-  loginpage(){
-    this.route.navigate(['login']);
-  }
-  
 }

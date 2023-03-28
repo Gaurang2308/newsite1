@@ -13,7 +13,8 @@ export class AdminComponent implements OnInit{
   user:any
   allusersData:any
   users:any
-  
+  isTableVisible = false;
+  isTable1Visible = false;
   usersModalObj : usersData = new usersData;
   blogs: any;
 display: any;
@@ -66,4 +67,15 @@ display: any;
       this.getallData();
     })
   }
-}
+  
+    showTable() {
+      this.isTableVisible = true;
+      this.isTable1Visible=false;
+    }
+
+    showTable1() {
+      this.isTable1Visible = true;
+      this.isTableVisible=false;
+    }
+  }
+
