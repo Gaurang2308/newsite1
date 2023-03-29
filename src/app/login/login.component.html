@@ -1,19 +1,32 @@
-<div class="container">
-    <form [formGroup]="loginform" class="w-50 mx-auto" (ngSubmit)="logIn()">
+
+    <form class="w-50 mx-auto" >
     
-        <div class="mb-3">
-          <label for="exampleInputusername1" class="form-label">Username</label>
-          <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-         
+      <div class="container">
+        <div class="screen">
+          <div class="screen__content">
+            <form [formGroup]="loginform" class="login" (ngSubmit)="logIn()" >
+              <div class="login__field">
+                <i class="login__icon fas fa-user"></i>
+                <input formControlName="username" type="text"  class="login__input" placeholder="User name">
+              </div>
+              <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input formControlName="password" type="password" class="login__input" placeholder="Password">
+              </div>
+              <button class="button login__submit">
+                <span class="button__text">Log In Now</span>
+                <i class="button__icon fas fa-chevron-right"></i>
+              </button>				
+            </form>
+            
+          </div>
+          <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>		
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+          </div>		
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
-</div>
-
-
+      </div>
+   
 
