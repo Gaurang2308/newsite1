@@ -68,5 +68,23 @@ export class UserComponent implements OnInit {
       this.reloadPage();
     })
   }
+  
 
+  OnEditBlogs(data:any){
+    this.blogModelobj.Username=data.Username;
+    this.formvalue.controls['title'].setValue(data.title)
+    this.formvalue.controls['discription'].setValue(data.discription)
+    this.formvalue.controls['url'].setValue(data.url)
+  }
+
+  UpdateBlog(){
+    this.blogModelobj.title = this.formvalue.value.title;
+    this.blogModelobj.discription = this.formvalue.value.discription;
+    this.blogModelobj.url = this.formvalue.value.url;
+    this.dis.updateblogs(this.blogModelobj,this.blogModelobj.Username).subscribe(res=>{
+      alert("record updated successfully")
+      this.formvalue.reset();
+      this.reloadPage();
+    });
+  }
 }
