@@ -1,3 +1,4 @@
+import { blogData } from './../user/user.model';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import {map} from 'rxjs/operators'
@@ -46,11 +47,6 @@ export class UsersDataService {
       return res;
     })) 
   }
-  updateblogs(data:any,username:string){
-    return this.http.put<any>("http://localhost:3000/Blogs/"+username,data).pipe(map((res:any)=>{
-      return res;
-    })) 
-  }
   GetblogById(code:any){
     return this.http.get('http://localhost:3000/Blogs/?Username='+`${code}`);
   }
@@ -58,6 +54,13 @@ export class UsersDataService {
     return this.http.delete<any>("http://localhost:3000/Blogs/"+id).pipe(map((res:any)=>{
       return res;
     }))
+  }
+  updateblogs(blogData:any,id:any){
+
+    return this.http.put<any>(`http://localhost:3000/Blogs/${id}`,blogData).pipe(map((res:any)=>{
+      return res;
+    }))
+    // return this.http.put<any>(this.blog+"/"+blogData,id);
   }
     
 }

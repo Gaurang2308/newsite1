@@ -10,13 +10,13 @@ import { blogData } from './user.model'
 })
 export class UserComponent implements OnInit {
   users: any;
-
   formvalue!: FormGroup;
   blogModelobj: blogData = new blogData;
   GetBlog: any;
   data: any;
   userName: any;
   showData: any;
+  blogid:any;
   // Blogs: any;
   blogs: any;
   reloadPage() {
@@ -71,17 +71,21 @@ export class UserComponent implements OnInit {
   
 
   OnEditBlogs(data:any){
-    this.blogModelobj.Username=data.Username;
+    this.blogid=data.id
     this.formvalue.controls['title'].setValue(data.title)
     this.formvalue.controls['discription'].setValue(data.discription)
     this.formvalue.controls['url'].setValue(data.url)
   }
 
-  UpdateBlog(){
-    this.blogModelobj.title = this.formvalue.value.title;
-    this.blogModelobj.discription = this.formvalue.value.discription;
-    this.blogModelobj.url = this.formvalue.value.url;
-    this.dis.updateblogs(this.blogModelobj,this.blogModelobj.Username).subscribe(res=>{
+  UpdateBlog(data:any){
+    console.log("updated",data);
+    
+    // this.blogModelobj.title = this.formvalue.value.title;
+    // this.blogModelobj.discription = this.formvalue.value.discription;
+    // this.blogModelobj.url = this.formvalue.value.url;
+    this.dis.updateblogs(data,this.blogid).subscribe(res=>{
+      console.log(res);
+      
       alert("record updated successfully")
       this.formvalue.reset();
       this.reloadPage();
