@@ -38,18 +38,7 @@
   ],
   "Blogs": [
     {
-      "Username": "Parth5021",
-      "title": "It’s Been 20 Years Since We Invaded Iraq. I Am Still in the Desert.",
-      "discription": "“I have gone to war and now I can issue my complaint. I can sit on my porch and complain all day. And you must listen. ",
-      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*cFK-YdT2Zna8ya5i4z3ThQ.jpeg",
       "id": 29
-    },
-    {
-      "Username": "Parth5021",
-      "title": "Power Laws in Culture",
-      "discription": "Almost 20 years ago, Chris Anderson wrote The Long Tail, which accurately predicted that the Internet would fragment attention and consumption would shift into the “tail.”",
-      "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*OShjeQUTuvh9i2Bulb47aQ.jpeg",
-      "id": 30
     },
     {
       "Username": "Jay2308",
@@ -92,6 +81,26 @@
       "discription": " Trying to knock sense into the younger generation is not for the faint of heart — In one of my earlier pieces on writing, Singaporean author Alvin Ang asked me in the comment section",
       "url": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*F6ZwcDCqfcIakTpnEwuSmw.jpeg",
       "id": 36
+    },
+    {
+      "id": 37
+    },
+    {
+      "id": 38
+    },
+    {
+      "Username": "Parth5021",
+      "title": "AI and the American Smile ",
+      "discription": "Imagine a time traveler journeyed to various times and places throughout human history and showed soldiers and warriors of the periods what a “selfie” is.",
+      "url": "https://miro.medium.com/v2/resize:fit:720/0*7o1nPtr260CgeJ-Z",
+      "id": 40
+    },
+    {
+      "Username": "Parth5021",
+      "title": "The [Heart] of the Matter",
+      "discription": "1976, New York designer Milton Glaser sat in the back seat of a taxi and arranged three capital letters and a stylized red heart into one of the most effective slogans in contemporary branding history.",
+      "url": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*QR-c_70c0Nm6yakTiY9mzw.png",
+      "id": 41
     }
   ],
   "posts": [
