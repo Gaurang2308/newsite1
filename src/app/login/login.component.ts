@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
         this.loginform.reset();
         this.router.navigate(['user']);
       }
-      else(this.user.status ==! "admin" && this.user.status ==!"user");{
+      else{
         alert("user not found");
       }
     },err=>{
@@ -57,3 +57,4 @@ export class LoginComponent implements OnInit {
     })
   }
 }
+  

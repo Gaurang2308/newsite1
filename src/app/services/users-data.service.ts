@@ -46,8 +46,8 @@ export class UsersDataService {
       return res;
     })) 
   }
-  editblogs(id:number){
-    return this.http.get<any>("http://localhost:3000/Blogs"+"/"+id).pipe(map((res:any)=>{
+  updateblogs(data:any,username:string){
+    return this.http.put<any>("http://localhost:3000/Blogs/"+username,data).pipe(map((res:any)=>{
       return res;
     })) 
   }
