@@ -10,14 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit{
   formvalue!: FormGroup
+  editform!:FormGroup;
   user:any
   allusersData:any
   users:any
+  blogid:any;
   isTableVisible = false;
   isTable1Visible = false;
   usersModalObj : usersData = new usersData;
   blogs: any;
 display: any;
+data: any;
+reloadPage() {
+  location.reload();
+}
   constructor(private formbuilder:FormBuilder,private api:UsersDataService){
     api.blogs().subscribe((display)=>
     {
@@ -37,9 +43,13 @@ display: any;
       username:[''],
       password:[''],
       status:[''],
-      blog:['']
-     }) 
+      title:[''],
+      discription:[''],
+      url:['']
+
+     })
   }
+ 
   addusers(){
     this.usersModalObj.name = this.formvalue.value.name;
     this.usersModalObj.username = this.formvalue.value.username;
@@ -76,6 +86,39 @@ display: any;
     showTable1() {
       this.isTable1Visible = true;
       this.isTableVisible=false;
+      
     }
+    delBlogs(data: any) {
+      this.api.deleteBlgs(data.id).subscribe(res => {
+        console.log(res);
+        alert("Data deleted");
+        this.formvalue.reset();
+      })
+    }
+
+    OnEditBlogs(data:any){
+     
+      this.blogid=data.id
+      console.log(data);
+      this.formvalue.controls['username'].setValue(data.Username)
+      this.formvalue.controls['title'].setValue(data.title)
+      this.formvalue.controls['discription'].setValue(data.discription)
+      this.formvalue.controls['url'].setValue(data.url)
+  }
+
+  UpdateBlog(data:any){
+    console.log("updated",data);
+    
+    // this.blogModelobj.title = this.formvalue.value.title;
+    // this.blogModelobj.discription = this.formvalue.value.discription;
+    // this.blogModelobj.url = this.formvalue.value.url;
+    this.api.updateblogs(data,this.blogid).subscribe(res=>{
+      console.log(res);
+      
+      alert("record updated successfully")
+      this.formvalue.reset();
+      this.reloadPage();
+    });
+  }
   }
 

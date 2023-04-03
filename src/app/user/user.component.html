@@ -1,15 +1,8 @@
-<!-- <nav class="navbar navbar-dark bg-primary">
-    <div class="container-fluid">
-      <h2>User</h2>
-      <div class="d-flex">
-        <button class="btn btn-success" >logout</button>
-      </div>
-    </div>
-  </nav> -->
-  <!-- <app-nav></app-nav> -->
-  
 
-    <button type="button" class="btn btn-info" style="float: right; margin-top: 50px; margin-right: 70px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
+<button type="button" class="btn btn-info" style="float: right; margin-top: 20px; margin-right: 20px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button><br/>
+<div class="container">
+
+    
     <table class="table table-trapped">
         <thead>
          
@@ -31,15 +24,19 @@
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1"  (click)="OnEditBlogs(display)" ><i class="bi bi-pencil"></i></button><br/>
                </td>
               
-              
-               <td>
+                
+              <td>
                 <button class="btn btn-danger" (click)="delBlogs(display)"><i class="bi bi-trash"></i></button>
                </td>
              
             </tr>
         </tbody>
+        <div class="text-center">
+          <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+        </div>
     </table>
 
+  </div>
 
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

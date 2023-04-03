@@ -6,3 +6,9 @@ export class usersData{
     status:string='';
     blog:any='';
 }
+export class blogData{
+    Username:string='';
+    title:string='';
+    discription:string='';
+    url:any='';
+    }

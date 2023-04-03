@@ -1,28 +1,51 @@
-<div class="container">
-    <table class="table1">
-      <thead>
-        <tr>
+<!-- <div class="container">
+  <table class="table1">
+    <thead>
+      <tr>
         <th>username</th>
         <th>title</th>
         <th>discription</th>
         <th>url</th>
-        
-        </tr>
-        
-      </thead>
-      <tbody>
-        <tr *ngFor="let display of blogs">
+
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let display of blogs">
         <td>{{display.Username}}</td>
         <td>{{display.title}}</td>
         <td>{{display.discription}}</td>
         <td><img src="{{display.url}}" style="height: 100px; width: 100px;"></td>
-       
-        </tr>
-      </tbody>
-    </table>
-    
-    </div>
-    <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      </tr>
+    </tbody>
+  </table>
+
+</div> -->
+<div class="container mt-5">
+  <table class="table1">
+    <thead>
+      <tr>
+        <th>username</th>
+        <th>title</th>
+        <th>discription</th>
+        <th>url</th>
+
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let display of blogs">
+        <td>{{display.Username}}</td>
+        <td>{{display.title}}</td>
+        <td>{{display.discription}}</td>
+        <td><img src="{{display.url}}" style="height: 100px; width: 100px;"></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
         <div class="card h-100">
           <img src="{{display.url}}" class="card-img-top" alt="...">

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersDataService } from '../services/users-data.service';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { blogData } from './user.model'
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -17,7 +18,6 @@ export class UserComponent implements OnInit {
   userName: any;
   showData: any;
   blogid:any;
-  // Blogs: any;
   blogs: any;
   reloadPage() {
     location.reload();
